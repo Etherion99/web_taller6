@@ -10,7 +10,7 @@ form.addEventListener('submit', (event) => {
     const email = document.getElementById('email');    
 
     validation(
-        email, [formObj['email'] == '', formObj['email'].length > 120], ['Campo obligatorio', 'Longitud máxima: 25']
+        email, [ formObj['email'] == '', formObj['email'].length > 120] , ['Campo obligatorio', 'Longitud máxima: 25']
     );
     
 });
@@ -67,3 +67,31 @@ function updateValuemax(input)
 {
     document.getElementById('maxCost').value = input;
 }
+
+
+$(function(){
+    $('#birthDay').on('change', calcularEdad);
+});
+
+function calcularEdad() {
+    
+    fecha = $(this).val();
+    var hoy = new Date();
+    var cumpleanos = new Date(fecha);
+    var edad = hoy.getFullYear() - cumpleanos.getFullYear();
+    var m = hoy.getMonth() - cumpleanos.getMonth();
+
+    if (m < 0 || (m === 0 && hoy.getDate() < cumpleanos.getDate())) {
+        edad--;
+    }
+    $('#edad').val(edad);
+}
+
+
+
+
+
+
+
+
+
