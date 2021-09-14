@@ -62,8 +62,7 @@
                             <div class="invalid-feedback order-3"></div>
                         </div>
                     </div>
-                </div>
-                    
+                </div>                                    
                 <div class="row mb-4">
                     
                     <div class="col">
@@ -78,142 +77,52 @@
                 </div>
                 <div class="row mb-4">
                     <div class="col">
-                        <label for="address" class="form-label fw-bold">Dirección</label>
+                        <label for="address" class="form-label fw-bold">Fecha de Cumpleaños</label>
                         <div class="input-group d-flex">
-                            <input type="text" class="form-control order-2" name="address" id="address" value="Cll, Cra, Av, Anv, Trans">
-                            <span class="input-group-text order-1"><i class="fas fa-home"></i></span>
+                            <input type="date" class="form-control order-2" name="address" id="address" value="Cll, Cra, Av, Anv, Trans">
+                            <span class="input-group-text order-1"><i class="fas fa-birthday-cake"></i></span>
                             <span class="focus-border"><i></i></span>
                             <div class="invalid-feedback order-3"></div>
                         </div>
                     </div>
                     <div class="col">
-                        <label for="phone" class="form-label fw-bold">Teléfono</label>
+                        <label for="phone" class="form-label fw-bold">Edad</label>
                         <div class="input-group d-flex">
                             <input type="text" class="form-control order-2" name="phone" id="phone">
-                            <span class="input-group-text order-1"><i class="fas fa-phone"></i></span>
+                            <span class="input-group-text order-1"><i class="fas fa-user"></i></span>
                             <span class="focus-border"><i></i></span>
                             <div class="invalid-feedback order-3"></div>
                         </div>
                     </div>
-                </div>
-                <div class="row mb-4">
-                    <div class="col">
-                        <label for="email" class="form-label fw-bold">Correo Electrónico</label>
-                        <div class="input-group d-flex">
-                            <input type="email" class="form-control order-2" name="email" id="email">
-                            <span class="input-group-text order-1"><i class="fas fa-envelope"></i></span>
-                            <span class="focus-border"><i></i></span>
-                            <div class="invalid-feedback order-3"></div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <label for="country" class="form-label fw-bold">País</label>
-                        <div class="input-group d-flex">
-                            <select class="form-select order-2" name="country" id="country">
-                                <option value="1">Colombia</option>
-                                <option value="2">Estados Unidos</option>
-                                <option value="3">Alemania</option>
-                                <option value="4">Francia</option>
-                            </select>
-                            <span class="input-group-text order-1"><i class="fas fa-globe-americas"></i></span>
-                            <span class="focus-border"><i></i></span>
-                            <div class="invalid-feedback order-3"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mb-4">                   
+                </div>                
+                <div class="row mb-4">     
+                    <h4 class="mb-4 form-label text-center">¿Ha sufrido alguna enfermedad?</h4>              
                     <div class="col">
                         <input type="radio" name="tastes" id="no-radio" value="no-tastes" checked onclick="noshowTastes()">        
-                        <label for="no-radio" class="form-label fw-bold">No Registrar Gusto</label>  
-                    </div>             
+                        <label for="no-radio" class="form-label fw-bold">No</label>  
+                    </div>          
                     <div  class="col">
                         <input type="radio" name="tastes" id="radio" value="tastes" onclick="showTastes()">
-                        <label for="radio" class="form-label fw-bold">Registrar Gustos</label>
+                        <label for="radio" class="form-label fw-bold">Sí</label>
                     </div>                  
                 </div>                                          
                 <div class="row mb-2 justify-content-center">                
                     <button class="btn btn-main col-3 fw-bold">Registrarme</button>
                 </div>
             </div>
-            <div class="card p-5 col-4 offset-1" id="gustos">
-                <div class="row mb-5">
-                    <h1 class="fs-2 text-center fw-bold">Gustos</h1>
+            <div class="card p-5 col-4 offset-1"  id="gustos">
+                <div class="row mb-4">
+                    <h1 class="fs-2 text-center fw-bold">Enfermedades</h1>
                 </div>
-                <div class="row mb-3">
-                    <div class="col">
-                        <label for="fav-color" class="form-label fw-bold">Color Favorito</label>
-                        <div class="input-group d-flex">
-                            <input type="text" class="form-control order-2" name="fav-color" id="fav-color">
-                            <span class="input-group-text order-1"><i class="fas fa-id-card"></i></span>
-                            <span class="focus-border"><i></i></span>
-                            <div class="invalid-feedback order-3"></div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <label for="fav-Brand" class="form-label fw-bold">Marca Favorita</label>
-                        <div class="input-group d-flex">
-                            <input type="text" class="form-control order-2" name="fav-Brand" id="fav-Brand">
-                            <span class="input-group-text order-1"><i class="fas fa-id-card"></i></span>
-                            <span class="focus-border"><i></i></span>
-                            <div class="invalid-feedback order-3"></div>
-                        </div>                    
-                    </div>
-                </div>
-                    <div class="row mb-3">                
-                        <div class="col">
-                            <label for="fav-style" class="form-label fw-bold">Estilo Favorito</label>
-                            <div class="input-group d-flex">
-                                <input type="text" class="form-control order-2" name="fav-style" id="fav-style">
-                                <span class="input-group-text order-1"><i class="fas fa-id-card"></i></span>
-                                <span class="focus-border"><i></i></span>
-                                <div class="invalid-feedback order-3"></div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <label for="fav-model" class="form-label fw-bold">Modelo Favorito</label>
-                            <div class="input-group d-flex">
-                                <input type="text" class="form-control order-2" name="fav-model" id="fav-model">
-                                <span class="input-group-text order-1"><i class="fas fa-id-card"></i></span>
-                                <span class="focus-border"><i></i></span>
-                                <div class="invalid-feedback order-3"></div>
-                            </div>
-                        </div>
-                    </div> 
-                    <div class="row mb-3">
-                        <label class="form-label fw-bold">Rango de precios</label>                       
-                        <div class="col">
-                            <label for="irange1" class="form-label fw-bold">mínimo:</label>
-                            <input class="form-control order-2" id="irange1" min="0" max="1000000" type="range" onchange="updateValuemin(this.value)">
-                        </div>
-                        <div  class="col"> 
-                            <label for="irange2" class="form-label fw-bold">máximo:</label>
-                            <input class="form-control order-2" id="irange2"  min="0" max="1000000" type="range" onchange="updateValuemax(this.value)">
-                        </div>
-                    </div>  
-                    <div class="row mb-3">
-                        <div class="col" >
-                            <label for="minCost" class="form-label fw-bold">Valor mínimo</label>    
-                            <div class="input-group d-flex"> 
-                                <span class="input-group-text order-1" style="width: 15%;"><i class="fas fa-dollar-sign"></i></span>       
-                                <span class="focus-border"><i></i></span>
-                                <div class="invalid-feedback order-3"></div>
-                                <input type="text" class="form-control order-1 inputrange" id="minCost" id="minCost" value="">
-                            </div>  
-                        </div>
-                        <div class="col">                        
-                            <label for="minCost" class="form-label fw-bold">Valor Máximo</label>  
-                            <div class="input-group d-flex">  
-                                <span class="input-group-text order-1" style="width: 15%;"><i class="fas fa-dollar-sign"></i></span>
-                                <span class="focus-border"><i></i></span>
-                                <div class="invalid-feedback order-3"></div>
-                                <input type="text" class="form-control order-1 inputrange" id="maxCost">
-                            </div> 
-                        </div>
-                    </div> 
+                <div class="row mb-2 text-center ">
+                    <h6>Cuentanos qué enfermedades padece en un texto:</h6>
+                </div>                
+                <div class="row mb-3">                               
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"
+                     style="resize: none;"></textarea>
                 </div> 
             </div>
         </form>
     </div>
 </body>
-
 </html>
