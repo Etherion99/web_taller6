@@ -1,37 +1,3 @@
-/* El campo email debe estar lleno y debe tener una longitud de máximo 120 
-caracteres. Si no es así debe indicarle al usuario */
-
-form.addEventListener('submit', (event) => {
-    event.preventDefault();
-
-    const formData = new FormData(form);
-    const formObj = Object.fromEntries(formData);
-
-    const email = document.getElementById('email');    
-
-    validation(
-        email, [ formObj['email'] == '', formObj['email'].length > 120] , ['Campo obligatorio', 'Longitud máxima: 25']
-    );
-    
-});
-
-function validation(input, conditions, messages) {
-    for (let i in conditions) {
-        let condition = conditions[i];
-
-        if (condition) {
-            input.classList.add('is-invalid');
-            input.classList.remove('is-valid');
-            input.parentNode.querySelector('.invalid-feedback').innerText = messages[i];
-            break;
-        } else {
-            input.classList.add('is-valid');
-            input.classList.remove('is-invalid');
-            input.parentNode.querySelector('.invalid-feedback').innerText = '';
-        }
-    }
-}
-
 /*Crear una sección de registro de gustos la cual se tendrá que habilitar cuando el 
 usuario seleccione en un input type="radio" , el cual debe contener como 
  color favorito, marca de carro favorita, estilo de carro favorito, y una que les diga 
@@ -88,8 +54,43 @@ function calcularEdad() {
 }
 
 
+function checkPassword()
+  {  
+    
+    const password = document.getElementById('password'); 
+    var re =new RegExp('(?=.*[!#%/&])');
+    console.log(password.value);
+    if(password.value.match(re)==null ){
+    
+        setWrongInput(password, 'La contraseña debe contener al menos de uno de estos carácteres especiales #,%,/,&');
+        return false;
+    } 
+    const password2 = document.getElementById('password2');
+    console.log(password2.value);
+    if (password.value !== password2.value) {
+ 
+        
+        setWrongInput(password2,'Las contraseñas deben coincidir');
+        
+        return false;
+    }
+    
+          
+    removeWrongInput(password);
+    removeWrongInput(password2);
+    return true;
+  }
 
-
+function setWrongInput(input, messages) {
+    input.classList.add('is-invalid');
+    input.classList.remove('is-valid');
+    input.parentNode.querySelector('.invalid-feedback').innerText = messages;
+}
+function removeWrongInput(input) {
+    input.classList.remove('is-invalid');
+    input.classList.add('is-valid');
+    input.parentNode.querySelector('.invalid-feedback').innerText = '';
+}
 
 
 
